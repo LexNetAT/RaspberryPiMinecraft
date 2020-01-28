@@ -231,6 +231,9 @@ if [ -d "nukkitx" ]; then
   DirName=$(readlink -e ~)
   UserName=$(whoami)
 
+  # Ask user for amount of memory they want to dedicate to the Minecraft server
+  Get_ServerMemory
+  
   # Update Minecraft server scripts
   Update_Scripts
 
@@ -243,6 +246,9 @@ if [ -d "nukkitx" ]; then
   Print_Style "NukkitX installation scripts have been updated to the latest version!" $GREEN
   exit 0
 fi
+
+# Get total system memory
+Get_ServerMemory
 
 # Create server directory
 Print_Style "Creating minecraft server directory..." "$YELLOW"

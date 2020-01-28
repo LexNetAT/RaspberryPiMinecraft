@@ -59,4 +59,4 @@ fi
 
 echo "Starting NukkitX server.  To view window type screen -r nukkitx."
 echo "To minimize the window and let the server run in the background, press Ctrl+A then Ctrl+D"
-screen -dmS nukkitx java -jar dirname/nukkitx/nukkitx.jar
+screen -dmS nukkitx java -jar -Xms400M -XmxmemselectM dirname/nukkitx/nukkitx.jar
